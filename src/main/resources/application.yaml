@@ -25,8 +25,8 @@ spring:
                 - "client_credentials"
                 - "resource_owner_password_credentials"
               redirect-uris:
-                - http://127.0.0.1:8080/login/oauth2/code/apple_health_data_client_oidc
-                - http://127.0.0.1:8080/authorized
+                - http://localhost:8080/login/oauth2/code/apple_health_data_client
+                - http://localhost:8080/swagger-ui.html
               scopes:
                 - read
                 - write
