@@ -102,10 +102,11 @@ public class DefaultSecurityConfig {
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
-                .redirectUri("http://localhost:8080/login/oauth2/code/apple_health_data_client")// The URL to redirect to after the client logs in
-                .postLogoutRedirectUri("http://localhost:8080/swagger-ui.html")// The URL to redirect to after the client logs out
+                .redirectUri("http://localhost:8082/login/oauth2/code/apple_health_data_client")// The URL to redirect to after the client logs in
+                .postLogoutRedirectUri("http://localhost:8082/swagger-ui.html")// The URL to redirect to after the client logs out
                 .scope("read")
                 .scope("write")
+                .scope("openid")
                 .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
                 .build();
 
