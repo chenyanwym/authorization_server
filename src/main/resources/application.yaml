@@ -1,35 +1,35 @@
 server:
   port: 9000
 
-spring:
-  security:
-    user:
-      name: william
-      password: password
-    oauth2:
-      client:
-        access-token-validity-seconds: 3600
-      authorizationserver:
-        issuer: http://auth-server:9000
-        client:
-          apple_health_data_client:
-            registration:
-              client-id: "apple_health_data_client"
-              client-secret: "{noop}secret"
-              client-name: Apple Health Data Client
-              client-authentication-methods:
-                - "client_secret_basic"
-              authorization-grant-types:
-                - "authorization_code"
-                - "refresh_token"
-                - "client_credentials"
-                - "resource_owner_password_credentials"
-              redirect-uris:
-                - http://localhost:8080/login/oauth2/code/apple_health_data_client
-                - http://localhost:8080/swagger-ui.html
-              scopes:
-                - read
-                - write
+#spring:
+#  security:
+#    user:
+#      name: william
+#      password: password
+#    oauth2:
+#      client:
+#        access-token-validity-seconds: 3600
+#      authorizationserver:
+#        issuer: http://auth-server:9000
+#        client:
+#          apple_health_data_client:
+#            registration:
+#              client-id: "apple_health_data_client"
+#              client-secret: "{noop}secret"
+#              client-name: Apple Health Data Client
+#              client-authentication-methods:
+#                - "client_secret_basic"
+#              authorization-grant-types:
+#                - "authorization_code"
+#                - "refresh_token"
+#                - "client_credentials"
+#                - "resource_owner_password_credentials"
+#              redirect-uris:
+#                - http://localhost:8080/login/oauth2/code/apple_health_data_client
+#                - http://localhost:8080/swagger-ui.html
+#              scopes:
+#                - read
+#                - write
 
 logging:
   level:
